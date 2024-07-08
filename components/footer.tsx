@@ -4,9 +4,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full items-start bg-neutral-100 py-10 text-sm sm:items-start">
+    <footer className="w-full bg-neutral-100 py-10 text-sm">
       <div className="mx-4 flex flex-col items-center justify-between sm:mx-10 md:flex-row">
-        <div className="mb-4 flex flex-col items-start sm:items-start md:mb-0">
+        {/* Left Section */}
+        <div className="mb-4 flex flex-col items-center sm:items-start md:mb-0">
           <Link href="/">
             <Image
               src="/images/Andora.svg"
@@ -16,18 +17,24 @@ export default function Footer() {
               className="h-[47px] w-[125px]"
             />
           </Link>
-          <nav>
-            <ul className="items-left flex flex-col space-x-4 text-xs sm:flex-row md:text-sm">
+          <nav className="mt-4 text-xs md:text-sm">
+            <ul className="flex flex-wrap justify-center space-x-4 sm:justify-start">
               <li>About</li>
               <li>Blog</li>
-              <li>Careers</li>
-              <li className="text-orange-800">We&rsquo;re hiring!</li>
-              <li>Shippings & Returns</li>
+              <li className="flex items-center">
+                <span>Careers</span>
+                <span className="ml-1 text-orange-800">
+                  We&lsquo;re hiring!
+                </span>
+              </li>
+              <li>Shipping & Returns</li>
               <li>Press</li>
             </ul>
           </nav>
         </div>
-        <div className="flex flex-col items-start sm:items-start md:flex-col">
+
+        {/* Right Section */}
+        <div className="mt-4 flex flex-col items-center sm:items-start md:flex-col">
           <p className="mb-2 md:mb-2">Download the app</p>
           <div className="flex items-center space-x-2">
             <Link href="/">
@@ -51,6 +58,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Bottom Section */}
       <div className="mx-10 mt-8 flex flex-col items-center justify-between border-t border-gray-200 md:flex-row">
         <nav>
           <ul className="mt-4 flex items-center space-x-2 sm:flex-row">
@@ -92,14 +101,14 @@ export default function Footer() {
             </Link>
           </ul>
         </nav>
-        <div>
-          <nav className="hidden sm:block">
-            <ul className="mt-4 flex items-center space-x-4 text-xs md:text-sm">
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </nav>
-        </div>
+
+        {/* Legal Links */}
+        <nav className="hidden sm:block">
+          <ul className="mt-4 flex items-center space-x-4 text-xs md:text-sm">
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

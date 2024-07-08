@@ -1,3 +1,4 @@
+// components/Header.js
 import { loginlinks, navlinks } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,12 +8,12 @@ export default function Header() {
   return (
     <header className="w-full bg-white">
       <div className="flex h-[38px] items-center justify-center bg-neutral-200 text-sm font-bold text-black">
-        <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
+        <p className="xs:text-sm ss:text-base text-center text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
           Summer Sale! Up to 50% off selected items. Limited time only.
         </p>
       </div>
 
-      {/* Small screen layout (392px to 834px) */}
+      {/* Small screen layout (480px to 1060px) */}
       <div className="hidden sm:mx-2 sm:mt-6 sm:flex sm:items-center sm:justify-between sm:space-x-3 md:hidden">
         <Link href="/" className="">
           <Image
@@ -64,8 +65,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile layout (up to 392px) */}
-      <div className="flex flex-col items-center justify-center space-y-3 sm:hidden">
+      {/* Mobile layout (up to 480px) */}
+      <div className="xs:hidden flex flex-col items-center justify-center space-y-3">
         <div className="flex w-full items-center justify-between px-4">
           <Link href="/" className="">
             <Image
@@ -132,7 +133,7 @@ export default function Header() {
             {loginlinks.map((link) => (
               <li
                 key={link.href}
-                className="text-xs sm:text-sm md:text-base lg:text-lg"
+                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -147,7 +148,7 @@ export default function Header() {
             {navlinks.map((link) => (
               <li
                 key={link.href}
-                className="text-xs sm:text-sm md:text-base lg:text-lg"
+                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
                 <Link href={link.href}>{link.label}</Link>
               </li>

@@ -3,83 +3,31 @@ import React from "react";
 
 export default function Partners() {
   return (
-    <section className="my-10">
-      <h2 className="mb-8 text-center text-lg font-bold text-black">
+    <section className="mx-auto my-10 max-w-screen-xl">
+      <h2 className="mb-8 text-center text-2xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl">
         Trusted by over 100+ companies
       </h2>
-      <div className="grid grid-cols-2 items-center justify-center gap-4 sm:grid-cols-3 md:grid-cols-4">
-        <div className="flex justify-center">
-          <Image
-            src="/images/chanel.png"
-            width={200}
-            height={70}
-            alt="chanel logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/adidas.png"
-            width={200}
-            height={70}
-            alt="adidas logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/hermes.png"
-            width={200}
-            height={70}
-            alt="hermes logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/gucci.png"
-            width={200}
-            height={70}
-            alt="gucci logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/vans.png"
-            width={200}
-            height={70}
-            alt="vans logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/prada.png"
-            width={200}
-            height={70}
-            alt="prada logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/northface.png"
-            width={200}
-            height={70}
-            alt="northface logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/images/versace.png"
-            width={200}
-            height={70}
-            alt="versace logo"
-            className="h-[70px] w-[200px]"
-          />
-        </div>
+      <div className="grid grid-cols-2 items-center justify-center gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+        {[
+          "chanel",
+          "adidas",
+          "hermes",
+          "gucci",
+          "vans",
+          "prada",
+          "northface",
+          "versace",
+        ].map((brand) => (
+          <div key={brand} className="flex justify-center">
+            <Image
+              src={`/images/${brand}.png`}
+              width={200}
+              height={70}
+              alt={`${brand} logo`}
+              className="h-[70px] w-[200px] sm:h-[90px] sm:w-[240px] md:h-[100px] md:w-[260px] lg:h-[110px] lg:w-[280px] xl:h-[120px] xl:w-[300px]"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
