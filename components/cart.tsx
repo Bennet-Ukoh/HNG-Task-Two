@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Cart() {
@@ -106,9 +107,12 @@ export default function Cart() {
                 Apply
               </button>
             </div>
-            <button className="rounded-md bg-black px-8 py-2 text-white">
+            <Link
+              href="/checkout"
+              className="rounded-md bg-black px-8 py-2 text-white"
+            >
               Go to checkout
-            </button>
+            </Link>
           </div>
         </div>
       </div>
