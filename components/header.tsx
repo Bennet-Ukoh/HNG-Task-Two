@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white">
       <div className="flex h-[38px] items-center justify-center bg-neutral-200 text-sm font-bold text-black">
-        <p className="xs:text-sm ss:text-base text-center text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        <p className="xs:text-sm ss:text-base text-center text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm">
           Summer Sale! Up to 50% off selected items. Limited time only.
         </p>
       </div>
@@ -48,13 +48,15 @@ export default function Header() {
             height={32}
             width={32}
           />
-          <Image
-            className="h-8 w-8"
-            src="/images/shopping-cart-01.png"
-            alt="cart"
-            height={32}
-            width={32}
-          />
+          <Link href="/cart">
+            <Image
+              className="h-8 w-8"
+              src="/images/shopping-cart-01.png"
+              alt="cart"
+              height={32}
+              width={32}
+            />
+          </Link>
           <Image
             className="h-8 w-8"
             src="/images/hamburger.png"
@@ -85,13 +87,15 @@ export default function Header() {
               height={32}
               width={32}
             />
-            <Image
-              className="h-8 w-8"
-              src="/images/shopping-cart-01.png"
-              alt="cart"
-              height={32}
-              width={32}
-            />
+            <Link href="/cart">
+              <Image
+                className="h-8 w-8"
+                src="/images/shopping-cart-01.png"
+                alt="cart"
+                height={32}
+                width={32}
+              />
+            </Link>
             <Image
               className="h-8 w-8"
               src="/images/hamburger.png"
@@ -133,7 +137,7 @@ export default function Header() {
             {loginlinks.map((link) => (
               <li
                 key={link.href}
-                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-lg lg:text-xl xl:text-xl"
               >
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -148,7 +152,7 @@ export default function Header() {
             {navlinks.map((link) => (
               <li
                 key={link.href}
-                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="xs:text-sm ss:text-base text-xs sm:text-lg md:text-lg lg:text-xl xl:text-xl"
               >
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -177,13 +181,15 @@ export default function Header() {
             height={32}
             width={32}
           />
-          <Image
-            className="h-8 w-8"
-            src="/images/shopping-cart-01.png"
-            alt="cart"
-            height={32}
-            width={32}
-          />
+          <Link href="/cart">
+            <Image
+              className="h-8 w-8"
+              src="/images/shopping-cart-01.png"
+              alt="cart"
+              height={32}
+              width={32}
+            />
+          </Link>
         </div>
       </div>
     </header>

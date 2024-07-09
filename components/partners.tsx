@@ -4,7 +4,7 @@ import React from "react";
 export default function Partners() {
   return (
     <section className="mx-auto my-10 max-w-screen-xl">
-      <h2 className="mb-8 text-center text-2xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl">
+      <h2 className="mx-4 mb-8 text-center text-xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl">
         Trusted by over 100+ companies
       </h2>
       <div className="grid grid-cols-2 items-center justify-center gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
